@@ -1,0 +1,194 @@
+Angular
+
+npm-node package manager/module
+install--
+        npm i -g@angular/cli@latest                      to check whether installed or not- npm v
+
+project creation
+         ng new projectname
+
+running command
+    ng serve --open        /ng s --o    
+
+    angular tchnologies
+-html
+-css
+-typescript :strictly typescript
+
+number:any
+
+transpiling-browser will convert typescript to javascript automatically for output
+
+npm i -node package module install
+
+-root module
+   -root component
+     -we can create sub components inside the module
+ -sub modules
+     -components
+
+module -a single ts file
+components-ts,html,css combined
+ -selector-used  to display components
+
+
+ create new components
+      -ng generate component component_name    /ng g c first
+
+
+working cycle of angular components
+constructor-->ngOnInit-->other methods
+
+data binding in angular
+--------------------
+1.one way binding
+   .ts to html-(component to view data sharing)
+       ..string interpolation {{}}
+       ..prperty binding       [property_name]="data"
+    .html to ts-(view to component)  
+       ..Event binding   (eventname)="method()"
+       ..$ event binding  (eventname)="method($event)"
+       ..event binding with template rendering variable
+ 2.Two way binding      
+    .ngModel [(ngModel)]="variable"  
+      -FormsModule-Module used to apply ngModel
+      
+      
+Redirection in Angular      
+   method- navigateByUrl(path)
+   class - router
+   module- AppRoutingModule
+
+   folder-file-class-methods
+   package module
+
+Dependency Injection
+  -to use a method of class in another class(alternate of inheritance)   
+ in constructer
+
+  accessSpecifier reference
+     access specifier -private/public
+        private: can use the injecting class only in the class
+        public: can use the injecting class in other classes of that file
+
+
+Angular services    
+   -It is a file in angular,all file can ACCESS the content of service file
+  -create     ng g s filename     
+
+  Angular Dierectives
+  -------------------
+
+  used to manipulate dom
+  1-component dierective
+  2-Structural Dierectives
+       -*ngFor-for creating loop in html
+       -*ngIf
+  3-Attribute directive(attribute-class style formcontrol etc)
+       -[ngClass]
+
+
+For validation in Angular(input error etc)
+--------------------------
+
+1.template driven form
+2.model driven form(always used)
+
+Model driven form
+  -ReactiveFormsModule  -module used to build model form
+  -FormBuiilder         -class used to build model form
+
+  -a model contain      -form group
+                        -array
+                        -controller
+
+  local storage in angular               
+  ------------------------
+  c-localStorage.setItem()
+  r-localStorage.getItem()
+  u-localStorage.setItem()
+  d-localStorage.removeItem()
+
+  Child parent relation
+  ----------------------
+
+  parent-child data sharing
+   @Input()-decorator used to share data from parent to child
+
+  childe-parent data sharing
+    
+
+
+date and time in angular
+-----------------------
+date- class used to access current date data in angular
+
+Angular pipes
+-------------
+used to convert datas to another format
+
+Event creation in angular
+------------------------
+EventEmitter-class used to create events
+emit()-to specify when the event happens
+
+API Creation in angular
+-----------------------
+HttpClientModule  -module
+HttpClient        -class
+
+methods
+-------
+get post put patch delete
+
+asynchronous in js
+ promise-them()
+        -catch()
+
+asynchronous in ts        rxjs(reactive extension for js)
+ observable-subscribe()  
+           -catch()
+
+-----------------------------------------------------------------------           
+Header Creation in angular
+--------------------------=
+
+HttpHeaders-class used to generate Headers
+
+Lazy Loading (to speed up page of hvy traffic)
+-------------
+ng g module moduleName --route moduleName --module app.module
+
+ -all product viwing page 
+ -single product view
+ -edit product
+ -delete product
+ -add new product
+
+ yamaha -1
+ kawasaki-2
+ ducati=3
+ honda-4
+
+ JsonServer
+ ----------
+ to run json files
+ npm i --save json-server
+
+ npx json-server --watch fileName --port 3000
+
+ ActivatedRoute -Class used to access params
+ params -method used to access params
+
+ pipe creation in Angular(to filter a data r6 bike)
+ ------------------------
+ ng g pipe pipeName
+ transform(value,filterString,propName)
+ value=pipe applying data
+ filterString=keywords used to filter data
+ propName=filter applying property in data
+
+ DAata sharing from module to module()
+ -------------------------------------
+ Behaviour sUbject-rxjs
+ reactive extension for js

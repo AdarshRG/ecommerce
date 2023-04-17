@@ -1,0 +1,8 @@
+#d1{
+    transition: 0.5 ease-in-out;
+    box-shadow: 2px 2px 4px rgba(0,0, 0, 1);
+}
+#d1:hover{
+    transform: scale(1.1);
+    
+}

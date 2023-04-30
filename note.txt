@@ -190,5 +190,10 @@ ng g module moduleName --route moduleName --module app.module
 
  DAata sharing from module to module()
  -------------------------------------
- Behaviour sUbject-rxjs
+ Behaviour sUbject-(from rxjs library) mostly alll asynchronous
  reactive extension for js
+
+ 1-import behaviour sUbject
+ 2-create an object of behaviour subject(on product.service)
+ 3-send the data using next method
+4-access data using subscribe

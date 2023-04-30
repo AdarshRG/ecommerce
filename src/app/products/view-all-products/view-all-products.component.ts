@@ -9,10 +9,14 @@ import { ProductService } from '../product.service';
 export class ViewAllProductsComponent implements OnInit {
   productData:any
   filterCategory:any
+  searchString:any=''
   constructor(private ps:ProductService){}
   ngOnInit():void{
     this.ps.viewAllProduct().subscribe((data:any)=>{
       this.productData=data;
+    })
+    this.ps.search.subscribe((data:any)=>{
+    this.searchString=data
     })
   }
 filter(category:any){
